@@ -23,9 +23,40 @@ Things you may want to cover:
 
 * ...
 
+# STEPS
+
 * brew install rbenv
-* rbenv install 2.6.0
-* rbenv use 2.6.0
+
+* rbenv install 2.5.3
+
+* rbenv local 2.5.3
+
 * gem install rails -v5.2.3
+
 * rails --help
+
 * rails new krobei --database=mysql --skip-coffee --skip-test --skip-bundle
+
+* cd krobei
+
+* // create repo krobei
+
+* // git remote add origin git@github.com:thaichor/krobei.git
+
+* // what is .keep file?
+
+* // git add --all
+
+* // git commit -m "init project"
+
+* // git push -u origin master
+
+* bundle
+
+* bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java
+
+* USE mysql;
+
+* SET PASSWORD FOR 'root'@'localhost' = PASSWORD('');
+
+* FLUSH PRIVILEGES;
