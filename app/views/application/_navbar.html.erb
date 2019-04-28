@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <%= link_to "Krobei", root_path, class: "navbar-brand" %>
-    
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,8 +10,11 @@
         <li class="nav-item <%= 'active' if current_page?(root_path) %>">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
-        <li class="nav-item <%= 'active' if current_page?(teachers_path) %>">
+        <li class="nav-item <%= 'active' if current_page?(teachers_path) || current_page?(new_teacher_path) %>">
           <%= link_to "Teachers", teachers_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item <%= 'active' if current_page?(students_path) || current_page?(new_student_path) %>">
+          <%= link_to "Students", students_path, class: "nav-link" %>
         </li>
       </ul>
     </div>

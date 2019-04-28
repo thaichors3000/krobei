@@ -2,34 +2,33 @@
 
 <p class="row">
   <strong class="col-sm-2">First name:</strong>
-  <%= @teacher.first_name %>
+  <%= @student.first_name %>
 </p>
 
 <p class="row">
   <strong class="col-sm-2">Last name:</strong>
-  <%= @teacher.last_name %>
+  <%= @student.last_name %>
 </p>
 
 <p class="row">
   <strong class="col-sm-2">Phone:</strong>
-  <%= @teacher.phone %>
+  <%= @student.phone %>
 </p>
 
 <p class="row">
   <strong class="col-sm-2">Email:</strong>
-  <%= @teacher.email %>
+  <%= @student.email %>
 </p>
 
 <p class="row">
   <strong class="col-sm-2">Gender:</strong>
-  <%= @teacher.gender %>
+  <%= @student.gender %>
 </p>
 
 <p class="row">
   <strong class="col-sm-2">Date of birth:</strong>
-  <%= @teacher.date_of_birth %>
+  <%= @student.date_of_birth %>
 </p>
 
-<%= link_to 'Edit', edit_teacher_path(@teacher), class: "btn btn-outline-primary" %>
-&nbsp;&nbsp;
-<%= link_to 'Back', teachers_path, class: "btn btn-outline-dark" %>
+<%= link_to 'Edit', edit_student_path(@student), class: "btn btn-outline-primary" %> |
+<%= link_to 'Back', students_path, class: "btn btn-outline-dark" %>

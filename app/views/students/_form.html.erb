@@ -1,10 +1,10 @@
-<%= form_with(model: teacher, local: true) do |form| %>
-  <% if teacher.errors.any? %>
+<%= form_with(model: student, local: true) do |form| %>
+  <% if student.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(teacher.errors.count, "error") %> prohibited this teacher from being saved:</h2>
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
 
       <ul>
-      <% teacher.errors.full_messages.each do |message| %>
+      <% student.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -13,42 +13,42 @@
 
   <div class="field form-group row">
     <%= form.label :first_name, class: "col-sm-2 col-form-label" %>
-    <div class: "col-sm-2">
+    <div class="col-sm-2">
       <%= form.text_field :first_name, class: "form-control" %>
     </div>
   </div>
 
   <div class="field form-group row">
     <%= form.label :last_name, class: "col-sm-2 col-form-label" %>
-    <div class: "col-sm-2">
+    <div class="col-sm-2">
       <%= form.text_field :last_name, class: "form-control" %>
     </div>
   </div>
 
   <div class="field form-group row">
     <%= form.label :phone, class: "col-sm-2 col-form-label" %>
-    <div class: "col-sm-2">
+    <div class="col-sm-2">
       <%= form.text_field :phone, class: "form-control" %>
     </div>
   </div>
 
   <div class="field form-group row">
     <%= form.label :email, class: "col-sm-2 col-form-label" %>
-    <div class: "col-sm-2">
+    <div class="col-sm-2">
       <%= form.text_field :email, class: "form-control" %>
     </div>
   </div>
 
   <div class="field form-group row">
     <%= form.label :gender, class: "col-sm-2 col-form-label" %>
-    <div class: "col-sm-2">
+    <div class="col-sm-2">
       <%= form.text_field :gender, class: "form-control" %>
     </div>
   </div>
 
   <div class="field form-group row">
     <%= form.label :date_of_birth, class: "col-sm-2 col-form-label" %>
-    <div class: "col-sm-2">
+    <div class="col-sm-3">
       <%= form.date_select :date_of_birth, class: "form-control" %>
     </div>
   </div>
