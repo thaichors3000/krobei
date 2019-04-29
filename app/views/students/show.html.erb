@@ -6,7 +6,7 @@
       <strong>First name:</strong>
     </div>
     <div class="col-9">
-      <%= @teacher.first_name %>
+      <%= @student.first_name %>
     </div>
   </p>
 
@@ -15,7 +15,7 @@
       <strong>Last name:</strong>
     </div>
     <div class="col-9">
-      <%= @teacher.last_name %>
+      <%= @student.last_name %>
     </div>
   </p>
 
@@ -24,7 +24,7 @@
       <strong>Phone:</strong>
     </div>
     <div class="col-9">
-      <%= @teacher.phone %>
+      <%= @student.phone %>
     </div>
   </p>
 
@@ -33,7 +33,7 @@
       <strong>Email:</strong>
     </div>
     <div class="col-9">
-      <%= @teacher.email %>
+      <%= @student.email %>
     </div>
   </p>
 
@@ -42,7 +42,7 @@
       <strong>Gender:</strong>
     </div>
     <div class="col-9">
-      <%= @teacher.gender %>
+      <%= @student.gender %>
     </div>
   </p>
 
@@ -51,10 +51,10 @@
       <strong>Date of birth:</strong>
     </div>
     <div class="col-9">
-      <%= @teacher.date_of_birth %>
+      <%= @student.date_of_birth %>
     </div>
   </p>
 </div>
 
-<%= link_to 'Edit', edit_teacher_path(@teacher), class: "btn btn-outline-primary" %>
-<%= link_to 'Back', teachers_path, class: "btn btn-outline-primary" %>
+<%= link_to 'Edit', edit_student_path(@student), class: "btn btn-outline-primary" %>
+<%= link_to 'Back', students_path, class: "btn btn-outline-primary" %>
