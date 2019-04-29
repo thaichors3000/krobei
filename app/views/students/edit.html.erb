@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-12 mt-15 mb-10">
+    <%= link_to 'Back', students_path, class: 'btn btn-secondary' %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h1>Editing Student</h1>
+    <%= render 'form', student: @student %>
+  </div>
+</div>
