@@ -11,7 +11,7 @@
           <strong>First name:</strong>
       </div>
       <div class="col-sm-9 text-left">
-        <%= @teacher.first_name %>
+        <%= @student.first_name %>
       </div>
     </div>
     <div class="row margin-bottom">
@@ -19,7 +19,7 @@
           <strong>Last name:</strong>
       </div>
       <div class="col-sm-9 text-left">
-        <%= @teacher.last_name %>
+        <%= @student.last_name %>
       </div>
     </div>
     <div class="row margin-bottom">
@@ -27,7 +27,7 @@
           <strong>Phone:</strong>
       </div>
       <div class="col-sm-9 text-left">
-        <%= @teacher.phone %>
+        <%= @student.phone %>
       </div>
     </div>
     <div class="row margin-bottom">
@@ -35,7 +35,7 @@
           <strong>Email:</strong>
       </div>
       <div class="col-sm-9 text-left">
-        <%= @teacher.email %>
+        <%= @student.email %>
       </div>
     </div>
      <div class="row margin-bottom">
@@ -43,7 +43,7 @@
           <strong>Gender:</strong>
       </div>
       <div class="col-sm-9 text-left">
-         <%= @teacher.gender %>
+         <%= @student.gender %>
       </div>
     </div>
      <div class="row margin-bottom">
@@ -51,14 +51,14 @@
           <strong>Date of birth:</strong>
       </div>
       <div class="col-sm-9 text-left">
-<%= @teacher.date_of_birth %>
+<%= @student.date_of_birth %>
       </div>
   </div>
  </div>
 </div>
 <br/>
-<%= link_to 'Back', teachers_path,class: "btn btn-primary" %> |
-<%= link_to 'Edit', edit_teacher_path(@teacher),class: "btn btn-danger" %> 
+<%= link_to 'Back', students_path,class: "btn btn-primary" %> |
+<%= link_to 'Edit', edit_student_path(@student),class: "btn btn-danger" %> 
 </div>
 
 

@@ -2,5 +2,9 @@
 
 <%= render 'form', teacher: @teacher %>
 
-<%= link_to 'Show', @teacher %> |
-<%= link_to 'Back', teachers_path %>
+<div class="container text-center">
+<%= link_to 'Back', teachers_path,class: "btn btn-primary" %> | 
+<%= link_to 'Show', @teacher,class: "btn btn-danger" %>
+</div>
+
+

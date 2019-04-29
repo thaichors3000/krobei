@@ -5,7 +5,7 @@ class CreateTeachers < ActiveRecord::Migration[5.2]
       t.string :last_name, null: false
       t.string :phone, null: false
       t.string :email, null: false
-      t.integer :gender, default: 0
+      t.integer :gender,default: 0
       t.date :date_of_birth, null: false
 
       t.timestamps

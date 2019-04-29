@@ -37,6 +37,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails', '~> 4.3.3'
 
+group :test do
+  gem 'shoulda-matchers'
+  gem 'rails-controller-testing'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

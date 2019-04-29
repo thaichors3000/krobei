@@ -1,17 +1,17 @@
-<%= form_with(model: teacher, local: true) do |form| %>
-  <% if teacher.errors.any? %>
+<%= form_with(model: student, local: true) do |form| %>
+  <% if student.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(teacher.errors.count, "error") %> prohibited this teacher from being saved:</h2>
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
 
       <ul>
-      <% teacher.errors.full_messages.each do |message| %>
+      <% student.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-  
-    <div class="actions text-center">
+
+  <div class="actions text-center">
     <%= form.submit%>
   </div>
   <div class="container">
@@ -29,21 +29,18 @@
         <%= form.text_field :phone, class: "form-control" %>
     </div>
     <div class="form-group">
-        <%= form.label :phone %>
-        <%= form.text_field :phone, class: "form-control" %>
-    </div>
-    <div class="form-group">
         <%= form.label :email %>
         <%= form.text_field :email, class: "form-control" %>
     </div>
     <div class="form-group">
-        <%= form.label :gender %>
+              <%= form.label :gender %>
         <%= form.text_field :gender, class: "form-control" %>
     </div>
 <div class="field form-group ">
     <%= form.label :date_of_birth %>
     <%= form.date_select :date_of_birth %>
   </div>
+</div>
   </form>
 </div>
 <% end %>
