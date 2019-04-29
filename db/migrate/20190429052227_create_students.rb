@@ -8,8 +8,8 @@ class CreateStudents < ActiveRecord::Migration[5.2]
       t.string :email, null: false
       t.integer :gender, default: 0
       t.date :date_of_birth, null: false
-      t.string :pearent_phone, null:false
-      t.string :address, null: false
+      t.string :address, default: false
+      t.timestamps
     end
   end
 end
