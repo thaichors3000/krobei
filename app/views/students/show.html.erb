@@ -2,41 +2,42 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-<p id="notice"><%= notice %></p>
+      <p id="notice"><%= notice %></p>
 
 <p>
   <strong>First name:</strong>
-  <%= @teacher.first_name %>
+  <%= @student.first_name %>
 </p>
 
 <p>
   <strong>Last name:</strong>
-  <%= @teacher.last_name %>
+  <%= @student.last_name %>
 </p>
 
 <p>
   <strong>Phone:</strong>
-  <%= @teacher.phone %>
+  <%= @student.phone %>
 </p>
 
 <p>
   <strong>Email:</strong>
-  <%= @teacher.email %>
+  <%= @student.email %>
 </p>
 
 <p>
   <strong>Gender:</strong>
-  <%= @teacher.gender %>
+  <%= @student.gender %>
 </p>
 
 <p>
   <strong>Date of birth:</strong>
-  <%= @teacher.date_of_birth %>
+  <%= @student.date_of_birth %>
 </p>
       </div>
     </div>
   </div>
 </div>
-<%= link_to 'Back', teachers_path,class:"btn btn-primary form-group" %> |
-<%= link_to 'Edit', edit_teacher_path(@teacher),class:"btn btn-info form-group" %> 
+
+<%= link_to 'Back', students_path, class:"btn btn-primary form-group" %> |
+<%= link_to 'Edit', edit_student_path(@student),class:"btn btn-info form-group" %>
 
