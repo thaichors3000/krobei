@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @student.first_name %> <%= @student.last_name %></h5>
+    <p class="card-text">Gender: <%= @student.gender %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Email: <%= @student.email %></li>
+    <li class="list-group-item">Phone: <%= @student.phone %></li>
+    <li class="list-group-item">Date of Birth: <%= @student.date_of_birth %></li>
+  </ul>
+  <div class="card-body">
+    <%= link_to 'Back', students_path, class:"btn btn-primary form-group" %>
+    <%= link_to 'Edit', edit_student_path(@student),class:"btn btn-info form-group" %>
+  </div>
+</div>

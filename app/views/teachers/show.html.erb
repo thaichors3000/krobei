@@ -1,34 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @teacher.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @teacher.last_name %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @teacher.phone %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @teacher.email %>
-</p>
-
-<p>
-  <strong>Gender:</strong>
-  <%= @teacher.gender %>
-</p>
-
-<p>
-  <strong>Date of birth:</strong>
-  <%= @teacher.date_of_birth %>
-</p>
-
-<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
-<%= link_to 'Back', teachers_path %>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @teacher.first_name %> <%= @teacher.last_name %></h5>
+    <p class="card-text">Gender: <%= @teacher.gender %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Email: <%= @teacher.email %></li>
+    <li class="list-group-item">Phone: <%= @teacher.phone %></li>
+    <li class="list-group-item">Date of Birth: <%= @teacher.date_of_birth %></li>
+  </ul>
+  <div class="card-body">
+    <%= link_to 'Back', teachers_path, class:"btn btn-primary form-group" %>
+    <%= link_to 'Edit', edit_teacher_path(@teacher),class:"btn btn-info form-group" %>
+  </div>
+</div>
