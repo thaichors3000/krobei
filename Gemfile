@@ -34,13 +34,19 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# use bootstrap 4 styles
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails', '~> 4.3.3'
+
+# styling form for bootstraps
+gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.8'
+
+  # load .env files
   gem 'dotenv-rails'
 end
 
@@ -54,7 +60,10 @@ group :development do
 end
 
 group :test do
+  # helper test
   gem 'rails-controller-testing'
+
+  # helper test
   gem 'shoulda-matchers'
 end
 
