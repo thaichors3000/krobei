@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-4 offset-4">
+    <div class="card" style="width: 100%;">
+      <div class="card-header">
+        <center><b><%= "#{@student.first_name} #{@student.last_name}" %></b></center>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          Phone: <span style="float: right"><%= @student.phone %></span>
+        </li>
+        <li class="list-group-item">
+          Parents Phone: <span style="float: right"><%= @student.phone %></span>
+        </li>
+        <li class="list-group-item">
+          Email: <span style="float: right"><%= @student.email %></span>
+        </li>
+        <li class="list-group-item">
+          Gender: <span style="float: right"><%= @student.gender %></span>
+        </li>
+        <li class="list-group-item">
+          Date of birth: <span style="float: right"><%= @student.date_of_birth %></span>
+        </li>
+        <li class="list-group-item">
+          Active: <span style="float: right"><%= @student.active %></span>
+        </li>
+      </ul>
+      <div class="card-body">
+        <%= link_to 'Edit', edit_student_path(@student), class: 'btn btn-primary' %>
+        <%= link_to 'Back', students_path, class: 'btn btn-secondary' %>
+      </div>
+    </div>
+  </div>
+</div>
