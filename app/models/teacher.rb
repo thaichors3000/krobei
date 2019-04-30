@@ -6,4 +6,8 @@ class Teacher < ApplicationRecord
   validates :email, presence: true
   validates :phone, presence: true
   validates :date_of_birth, presence: true
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end

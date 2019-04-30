@@ -1,0 +1,7 @@
+<%= simple_form_for course do |form| %>
+  <%= form.input :name %>
+  <%= form.input :start_date %>
+  <%= form.input :end_date %>
+  <%= form.association :teacher, label_method: :full_name %>
+  <%= form.button :submit, class: 'btn btn-primary' %>
+<% end %>
