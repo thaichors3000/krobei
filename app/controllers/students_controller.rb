@@ -5,12 +5,13 @@ class StudentsController < ApplicationController
     @students = Student.all
   end
 
+  def show; end
+
   def new
     @student = Student.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @student = Student.new(student_params)
