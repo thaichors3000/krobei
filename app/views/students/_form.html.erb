@@ -6,7 +6,7 @@
       <%= form.input :phone %>
       <%= form.input :parents_phone %>
       <%= form.input :email %>
-      <%= form.input :gender %>
+      <%= form.input :gender, collection: ["female", "male"] %>
       <%= form.input :date_of_birth, as: :date, start_year: Date.today.year - 100,
                      end_year: Date.today.year, order: [:day, :month, :year] %>
       <%= form.input :active, as: :boolean, inline_label: "Active" %>
