@@ -1,6 +1,8 @@
 class Teacher < ApplicationRecord
   enum gender: %i[female male]
 
+  has_many :courses
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true

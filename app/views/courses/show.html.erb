@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <div class="row">
   <div class="col-md-4 offset-4">
     <div class="card" style="width: 100%;">
@@ -8,13 +6,13 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-          Start Date: <span style="float: right"><%= @course.start_date %></span>
+          Start Date: <span style="float: right"><%= @course.start_date.strftime("%d-%b-%Y") %></span>
         </li>
         <li class="list-group-item">
-          End Date: <span style="float: right"><%= @course.end_date %></span>
+          End Date: <span style="float: right"><%= @course.end_date.strftime("%d-%b-%Y") %></span>
         </li>
         <li class="list-group-item">
-          Teacher: <span style="float: right"><%= @course.teacher.full_name %></span>
+          Teach By: <span style="float: right"><%= @course.teacher.full_name %></span>
         </li>
       </ul>
       <div class="card-body">

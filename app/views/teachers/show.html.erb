@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <div class="row">
   <div class="col-md-4 offset-4">
     <div class="card" style="width: 100%;">
@@ -16,7 +15,7 @@
           Gender: <span style="float: right"><%= @teacher.gender %></span>
         </li>
         <li class="list-group-item">
-          Date of birth: <span style="float: right"><%= @teacher.date_of_birth %></span>
+          Date of birth: <span style="float: right"><%= @teacher.date_of_birth.strftime("%d-%b-%Y") %></span>
         </li>
       </ul>
       <div class="card-body">

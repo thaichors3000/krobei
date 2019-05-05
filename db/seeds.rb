@@ -17,3 +17,8 @@ Student.create([
   { first_name: 'Cheang', last_name: 'Veang', email: 'kimsrung@gmail.com', phone: '016222111', parents_phone: '016222333', date_of_birth: '2019-01-01' },
   { first_name: 'Sinh', last_name: 'Steve', email: 'bunthai@gmail.com', phone: '016223111', parents_phone: '016222333', date_of_birth: '2019-01-01' }
 ])
+
+Course.create([
+  { name: 'Datebase Analysis', start_date: '2019-01-01', end_date: '2019-01-01', teacher: Teacher.last },
+  { name: 'React Native', start_date: '2019-01-01', end_date: '2019-01-01', teacher: Teacher.first }
+])
