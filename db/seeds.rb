@@ -17,3 +17,9 @@ Student.create([
   { first_name: 'Cheang', last_name: 'Veang', email: 'kimsrung@gmail.com', phone: '016222111', parents_phone: '016222333', date_of_birth: '2019-01-01' },
   { first_name: 'Sinh', last_name: 'Steve', email: 'bunthai@gmail.com', phone: '016223111', parents_phone: '016222333', date_of_birth: '2019-01-01' }
 ])
+
+Course.create([
+  { name 'CSS', start_date: '2019-05-05', end_date: '2019-08-05', teacher_id: 1 },
+  { name 'Java', start_date: '2019-05-05', end_date: '2019-08-05', teacher_id: 1 },
+  { name 'C Programing', start_date: '2019-05-05', end_date: '2019-08-05', teacher_id: 1 },
+])
