@@ -17,3 +17,9 @@ Student.create([
   { first_name: 'Cheang', last_name: 'Veang', email: 'kimsrung@gmail.com', phone: '016222111', parents_phone: '016222333', date_of_birth: '2019-01-01' },
   { first_name: 'Sinh', last_name: 'Steve', email: 'bunthai@gmail.com', phone: '016223111', parents_phone: '016222333', date_of_birth: '2019-01-01' }
 ])
+
+Course.create([
+  { name: 'Niron', start_date: '2019-04-24', end_date: '2019-05-24', teacher_id: '001' },
+  { name: 'Chenda', start_date: '2019-10-03', end_date: '2019-10-13', teacher_id: '002' },
+  { name: 'Alex', start_date: '2019-06-15', end_date: '2019-06-20', teacher_id: '003' }
+])

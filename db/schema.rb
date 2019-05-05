@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_30_095015) do
+ActiveRecord::Schema.define(version: 2019_05_05_160521) do
 
   create_table "courses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", limit: 100, null: false
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 2019_04_30_095015) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["teacher_id"], name: "index_courses_on_teacher_id"
+  end
+
+  create_table "seed_migration_data_migrations", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "version"
+    t.integer "runtime"
+    t.datetime "migrated_on"
   end
 
   create_table "students", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

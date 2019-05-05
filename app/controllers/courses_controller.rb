@@ -1,5 +1,8 @@
 class CoursesController < ApplicationController
+  before_action :set_course, only: [:show, :edit, :update, :destroy]
+
   def index
+    @courses = Course.includes(:teacher)
   end
 
   def new
@@ -28,12 +31,29 @@ class CoursesController < ApplicationController
   end
 
   def update
+    respond_to do |format|
+      if @course.update(course_params)
+        format.html { redirect_to @course, notice: 'course was successfully updated.' }
+        format.json { render :show, status: :ok, location: @course }
+      else
+        format.html { render :edit }
+        format.json { render json: @course.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
+    @course.destroy
+    respond_to do |format|
+      format.html { redirect_to courses_url, notice: 'Course was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private
+    def set_course
+      @course = Course.find(params[:id])
+    end
     def course_params
       params.require(:course).permit(:name, :start_date, :end_date, :teacher_id)
     end
