@@ -36,12 +36,12 @@ ActiveRecord::Schema.define(version: 2019_04_30_095015) do
   end
 
   create_table "teachers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "first_name", null: false
-    t.string "last_name", null: false
-    t.string "phone", null: false
-    t.string "email", null: false
-    t.integer "gender", default: 0
-    t.date "date_of_birth", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "phone"
+    t.string "email"
+    t.integer "gender"
+    t.date "date_of_birth"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
