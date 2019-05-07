@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Teachers</h1>
 
 <table class="table table-dark">
@@ -26,9 +24,11 @@
         <td><%= teacher.email %></td>
         <td><%= teacher.gender %></td>
         <td><%= teacher.date_of_birth %></td>
-        <td><%= link_to 'Show', teacher %></td>
-        <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
-        <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Show', teacher, class: "btn btn-primary" %>
+          <%= link_to 'Edit', edit_teacher_path(teacher), class: "btn btn-success" %>
+          <%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+        </td>
       </tr>
     <% end %>
   </tbody>
