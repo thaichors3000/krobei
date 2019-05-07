@@ -48,6 +48,9 @@ group :development, :test do
 
   # load .env files
   gem 'dotenv-rails'
+
+  # generate random data for testing
+  gem 'factory_bot_rails'
 end
 
 group :development do

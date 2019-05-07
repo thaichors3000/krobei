@@ -2,7 +2,9 @@ class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
 
   def index
-    @courses = Course.all
+    @student = Student.find_by(id: params[:student_id])
+    
+    @courses = @student ? @student.courses : Course.all
   end
 
   def new

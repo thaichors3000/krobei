@@ -1,6 +1,9 @@
 class Teacher < ApplicationRecord
   enum gender: %i[female male]
 
+  has_many :courses, dependent: :restrict_with_error
+  # has_many :courses, dependent: :restrict_with_exception
+
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true
