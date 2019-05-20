@@ -27,8 +27,27 @@
       <div class="card-body">
         <%= link_to 'Edit', edit_student_path(@student), class: 'btn btn-primary' %>
         <%= link_to 'Back', students_path, class: 'btn btn-secondary' %>
-        <%= link_to 'Courses', student_courses_path(@student), class: 'btn btn-success' %>
+        <%#= link_to 'Courses', student_courses_path(@student), class: 'btn btn-success' %>
       </div>
     </div>
+  </div>
+</div>
+
+<br>
+<div class="row">
+  <div class="col-md-4 offset-4">
+    <div class="card" style="width: 100%;">
+      <div class="card-header">
+        <center><b>Registered Courses</b></center>
+      </div>
+      <ul class="list-group list-group-flush">
+        <% @student.courses.each do |course| %>
+          <li class="list-group-item">
+            <%= "#{course.name}, by #{course.teacher.full_name}" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
   </div>
 </div>
