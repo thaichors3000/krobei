@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-4 offset-4">
+    <%= simple_form_for enrolment do |form| %>
+      <% if enrolment.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(enrolment.errors.count, 'error') %> prohibited this enrolment from being saved:</h2>
+          <ul>
+            <% enrolment.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <% if @student %>
+          <%= form.association :course %>
+          <%= hidden_field_tag :student_id, params[:student_id] %>
+        <% else %>
+          <%= form.association :student, label_method: :full_name %>
+          <%= hidden_field_tag :course_id, params[:course_id] %>
+        <% end %>
+      </div>
+
+      <div class="actions">
+        <%= form.button :submit, class: "btn btn-primary" %>
+        <% if @student %>
+          <%= link_to 'Back', student_courses_path(@student), class: 'btn btn-success' %>
+        <% else %>
+          <%= link_to 'Back', course_students_path(@course), class: 'btn btn-success' %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

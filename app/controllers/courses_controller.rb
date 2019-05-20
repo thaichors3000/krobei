@@ -3,19 +3,26 @@ class CoursesController < ApplicationController
 
   def index
     @student = Student.find_by(id: params[:student_id])
-    
+
     @courses = @student ? @student.courses : Course.all
   end
 
   def new
+    @student = Student.find_by(id: params[:student_id])
     @course = Course.new
   end
 
   def create
+    @student = Student.find_by(id: params[:student_id])
+
     @course = Course.new(course_params)
 
     respond_to do |format|
       if @course.save
+        if @student
+          @enrolment = Enrolment.new(student_id: params[:student_id], course_id: @course.id)
+          @enrolment.save
+        end
         format.html { redirect_to @course, notice: 'Course was successfully created.' }
         format.json { render :show, status: :created, location: @course }
       else
@@ -27,6 +34,7 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
+    @students = @course.students
   end
 
   def edit

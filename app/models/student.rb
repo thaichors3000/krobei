@@ -1,7 +1,7 @@
 class Student < ApplicationRecord
   enum gender: %i[female male]
 
-  has_many :enrolments
+  has_many :enrolments, dependent: :destroy, inverse_of: :student
   has_many :courses, through: :enrolments
 
   validates :first_name, presence: true
