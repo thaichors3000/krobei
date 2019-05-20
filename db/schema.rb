@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2019_05_07_100657) do
 
   create_table "courses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", limit: 100, null: false
+    t.integer "max_students", default: 20, null: false
     t.date "start_date", null: false
     t.date "end_date", null: false
     t.bigint "teacher_id", null: false

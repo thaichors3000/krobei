@@ -2,4 +2,8 @@
   <p id="notice" class="alert alert-success">
     <%= notice %>
   </p>
+<% elsif flash[:error] %>
+  <p id='notice' class="alert alert-danger">
+    <%= flash[:error] %>
+  </p>
 <% end %>

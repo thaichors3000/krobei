@@ -37,9 +37,12 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # use bootstrap 4 styles
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails', '~> 4.3.3'
+gem "select2-rails"
 
 # styling form for bootstraps
 gem 'simple_form'
+
+gem 'ffaker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

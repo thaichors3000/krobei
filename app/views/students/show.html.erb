@@ -23,6 +23,16 @@
         <li class="list-group-item">
           Active: <span style="float: right"><%= @student.active %></span>
         </li>
+        <% if @student.courses.present? %>
+          <li class="list-group-item">
+            Registered in course:
+          </li>
+          <li class="list-group-item">
+            <% @student.courses.each do |course| %>
+              <%= course.name%> <br/>
+            <% end %>
+          </li>
+        <% end %>
       </ul>
       <div class="card-body">
         <%= link_to 'Edit', edit_student_path(@student), class: 'btn btn-primary' %>

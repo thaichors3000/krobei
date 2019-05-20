@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-4 offset-4">
+    <%= simple_form_for enrolment do |form| %>
+      <% if enrolment.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(enrolment.errors.count, "error") %> prohibited this enrolment from being saved:</h2>
+
+          <ul>
+            <% enrolment.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= form.input :first_name %>
+        <%= form.input :last_name %>
+        <%= form.input :phone %>
+        <%= form.input :parents_phone %>
+        <%= form.input :email %>
+        <%= form.input :gender, as: :radio_buttons, collection: ['female', 'male'] %>
+        <%= form.input :date_of_birth %>
+        <%= form.input :active, as: :boolean %>
+      </div>
+
+      <div class="actions">
+        <%= form.button :submit, class: "btn btn-primary" %>
+        <%= link_to 'Back', enrolments_path, class: 'btn btn-secondary' %>
+      </div>
+    <% end %>
+  </div>
+</div>

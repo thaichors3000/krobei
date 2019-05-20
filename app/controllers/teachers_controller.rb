@@ -55,10 +55,21 @@ class TeachersController < ApplicationController
   # DELETE /teachers/1.json
   def destroy
     @teacher.destroy
-    respond_to do |format|
-      format.html { redirect_to teachers_url, notice: 'Teacher was successfully destroyed.' }
-      format.json { head :no_content }
+
+    if @teacher.errors.present?
+      flash[:error] = error_message
+      redirect_to teachers_url
+    else
+      respond_to do |format|
+        format.html { redirect_to teachers_url, notice: 'Teacher was successfully destroyed.' }
+        format.json { head :no_content }
+      end
     end
+  end
+
+  def error_message
+    course = @teacher.courses.map{|course| course.name}.join(', ')
+    "#{@teacher.errors.full_messages.join(' ')} in #{course} course"
   end
 
   private
