@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-4 offset-4">
+    <br>
+    <h3>Register Student to new course</h3>
+    <br>
+    <%= simple_form_for enrolment do |form| %>
+      <% if enrolment.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(enrolment.errors.count, 'error') %> prohibited this enrolment from being saved:</h2>
+          <ul>
+            <% enrolment.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+          <%= form.association :course %>
+          <%= hidden_field_tag :student_id, params[:student_id] %>
+      </div>
+
+      <div class="actions">
+        <%= form.button :submit, class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div> 

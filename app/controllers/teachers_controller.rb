@@ -1,6 +1,8 @@
 class TeachersController < ApplicationController
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
+  before_action :set_teacher, only: [:show, :edit, :update, :destroy]
+
   # GET /teachers
   # GET /teachers.json
   def index
@@ -54,7 +56,12 @@ class TeachersController < ApplicationController
   # DELETE /teachers/1
   # DELETE /teachers/1.json
   def destroy
+    @courses = Course.where(teacher_id: @teacher.id)
+    @courses.each do |course|
+      course.destroy
+    end
     @teacher.destroy
+
     respond_to do |format|
       format.html { redirect_to teachers_url, notice: 'Teacher was successfully destroyed.' }
       format.json { head :no_content }

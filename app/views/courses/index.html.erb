@@ -1,9 +1,15 @@
 <% if @student %>
-  <h1>Student Detail</h1>
-  <h4><%= @student.full_name %></h4>
+  <br>
+  <h4 class="text-center"><span class="text-bold">Student Name:   </span><%= @student.full_name %></h4>
+  <br>
+  <%= link_to "New Course", new_course_path, class: "btn btn-outline-primary" %>
+  <%= link_to "New enrolment", new_student_enrolment_path(@student), class: "btn btn-outline-primary" %>
 <% end %>
 
-<h1>Courses</h1>
+
+
+<br>
+<br>
 
 <table class="table table-dark">
   <thead>
@@ -40,7 +46,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to "New Course", new_course_path, class: "btn btn-outline-primary" %>

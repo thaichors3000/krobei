@@ -2,7 +2,7 @@ class Student < ApplicationRecord
   enum gender: %i[female male]
 
   has_many :enrolments
-  has_many :courses, through: :enrolments
+  has_many :courses, through: :enrolments, dependent: :restrict_with_error
 
   validates :first_name, presence: true
   validates :last_name, presence: true

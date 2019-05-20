@@ -1,6 +1,12 @@
-<h1>Students</h1>
+<br>
+<h1 class="text-center">Students</h1>
+<br>
 
-<table class="table table-dark">
+<%= link_to 'New Student', new_student_path, class: "btn btn-outline-primary" %>
+<br>
+<br>
+
+<table class="table table-dark table-responsive">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -37,7 +43,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Student', new_student_path, class: "btn btn-outline-primary" %>
