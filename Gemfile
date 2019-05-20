@@ -51,6 +51,8 @@ group :development, :test do
 
   # generate random data for testing
   gem 'factory_bot_rails'
+
+  gem 'ffaker'
 end
 
 group :development do
