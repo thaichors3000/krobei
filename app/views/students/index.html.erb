@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First name</th>
+      <th scope="col" >First name</th>
       <th scope="col">Last name</th>
       <th scope="col">Phone</th>
       <th scope="col">Parents Phone</th>
@@ -29,10 +29,10 @@
         <td><%= student.date_of_birth %></td>
         <td><%= student.active %></td>
         <td>
-          <%= link_to 'Show', student, class: "btn btn-primary" %>
-          <%= link_to 'Edit', edit_student_path(student), class: "btn btn-success" %>
-          <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-          <%= link_to 'Course Registeration', new_enrolment_path(student_id: student.id), class: "btn btn-primary" %>
+          <%= link_to 'Show', student, class: "btn btn-primary student-action-btn" %>
+          <%= link_to 'Edit', edit_student_path(student), class: "btn btn-success student-action-btn" %>
+          <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger student-action-btn" %>
+          <%= link_to 'Course Registeration', new_enrolment_path(student_id: student.id), class: "btn btn-info student-action-btn" %>
         </td>
       </tr>
     <% end %>
