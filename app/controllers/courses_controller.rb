@@ -46,9 +46,12 @@ class CoursesController < ApplicationController
 
   def destroy
     @course.destroy
-    respond_to do |format|
-      format.html { redirect_to courses_url, notice: 'Course was successfully destoryed.' }
-      format.json { head :no_content }
+    if @course.errors.present?
+      flash[:error] = error_message
+      redirect_to courses_url
+    else
+      flash[:notice] = 'Course was successfully destroyed.'
+      redirect_to courses_url
     end
   end
 
@@ -58,6 +61,10 @@ class CoursesController < ApplicationController
     end
 
     def course_params
-      params.require(:course).permit(:name, :start_date, :end_date, :teacher_id)
+      params.require(:course).permit(:name, :start_date, :max_students, :end_date, :teacher_id)
+    end
+
+    def error_message
+      "#{@course.errors.full_messages.join(", ")} ( #{@course.students.map(&:full_name).join(", ")} )"
     end
 end

@@ -32,3 +32,21 @@
     </div>
   </div>
 </div>
+
+</div>
+
+<br>
+<div class="row">
+  <div class="col-md-4 offset-4">
+    <div class="card" style="width: 100%;">
+      <div class="card-header">
+        <center><b>Registered Courses</b></center>
+      </div>
+      <ul class="list-group list-group-flush">
+        <% @student.courses.each do |course| %>
+          <li class="list-group-item">
+            <%= "#{course.name}, by #{course.teacher.full_name}" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>

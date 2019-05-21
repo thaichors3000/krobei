@@ -21,4 +21,22 @@
       </div>
     </div>
   </div>
+  </div>
+
+<br>
+<div class="row">
+  <div class="col-md-4 offset-4">
+    <div class="card" style="width: 100%;">
+      <div class="card-header">
+        <center><b>Registered Students</b></center>
+      </div>
+      <ul class="list-group list-group-flush">
+        <% @course.students.each do |student| %>
+          <li class="list-group-item">
+            <%= student.full_name %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>

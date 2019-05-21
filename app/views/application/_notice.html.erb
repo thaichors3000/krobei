@@ -1,5 +1,21 @@
-<% if notice %>
-  <p id="notice" class="alert alert-success">
-    <%= notice %>
+
+  <% if flash[:error] %>
+  <p class="alert alert-danger">
+    <%= flash[:error] %>
   </p>
 <% end %>
+<% if flash[:notice] %>
+  <p id="notice" class="alert alert-success alert-dismissible fade show" role="alert">
+    <%= flash[:notice] %>
+  </p>
+<% end %>
+
+<script>
+var myVar = setInterval(myTimer, 3000);
+  function myTimer() {
+    var element = document.getElementById('notice');
+    if(element){
+      element.parentNode.removeChild(element);
+    }
+} 
+</script>
