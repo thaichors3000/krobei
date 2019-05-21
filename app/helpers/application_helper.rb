@@ -7,4 +7,10 @@ module ApplicationHelper
       { title: 'Courses', path: courses_path }
     ]
   end
+  
+  def link_to_icon(path, **options)
+    link_to path, class: "btn btn-sm btn-outline-#{options[:type]}", **options.except(:type, :icon) do
+      icon 'fas', options[:icon]
+    end
+  end
 end

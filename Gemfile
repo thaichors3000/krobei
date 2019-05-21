@@ -33,13 +33,17 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'ffaker'
 # use bootstrap 4 styles
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails', '~> 4.3.3'
+gem 'font-awesome-sass', '~> 5.8.1'
 
 # styling form for bootstraps
 gem 'simple_form'
+
+# pagination
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -51,6 +55,9 @@ group :development, :test do
 
   # generate random data for testing
   gem 'factory_bot_rails'
+
+  # random data
+  gem 'ffaker'
 end
 
 group :development do

@@ -5,6 +5,7 @@ class CoursesController < ApplicationController
     @student = Student.find_by(id: params[:student_id])
     
     @courses = @student ? @student.courses : Course.all
+    @courses = @courses.page(params[:page])
   end
 
   def new
