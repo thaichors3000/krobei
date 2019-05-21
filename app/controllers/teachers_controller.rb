@@ -55,9 +55,12 @@ class TeachersController < ApplicationController
   # DELETE /teachers/1.json
   def destroy
     @teacher.destroy
-    respond_to do |format|
-      format.html { redirect_to teachers_url, notice: 'Teacher was successfully destroyed.' }
-      format.json { head :no_content }
+    if @teacher.errors.present?
+      flash[:error] = error_message
+      redirect_to teachers_url
+    else
+      flash[:notice] = 'Teacher was successfully destroyed.'
+      redirect_to teachers_url
     end
   end
 
@@ -70,5 +73,9 @@ class TeachersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def teacher_params
       params.require(:teacher).permit(:first_name, :last_name, :phone, :email, :gender, :date_of_birth)
+    end
+    
+    def error_message
+      "#{@teacher.errors.full_messages.join(", ")} ( #{@teacher.courses.map(&:name).join(", ")} )"
     end
 end

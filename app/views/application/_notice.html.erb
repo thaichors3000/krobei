@@ -1,5 +1,17 @@
-<% if notice %>
-  <p id="notice" class="alert alert-success">
-    <%= notice %>
-  </p>
+<% if flash[:error] || flash[:notice] %>
+  <div id="notice" class="alert alert-<%= flash[:error].present? ? 'danger' : 'success' %> alert-dismissible fade show" role="alert">
+    <%= flash[:error] || flash[:notice] %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
 <% end %>
+<script>
+var myVar = setInterval(myTimer, 3000);
+  function myTimer() {
+    var element = document.getElementById('notice');
+    if(element){
+      element.parentNode.removeChild(element);
+    }
+} 
+</script>

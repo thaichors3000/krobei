@@ -14,6 +14,9 @@
         <li class="list-group-item">
           Teacher: <span style="float: right"><%= @course.teacher.full_name %></span>
         </li>
+         <li class="list-group-item">
+          Max Students: <span style="float: right"><%= @course.max_students %></span>
+        </li>
       </ul>
       <div class="card-body">
         <%= link_to 'Edit', edit_course_path(@course), class: 'btn btn-primary' %>
