@@ -3,6 +3,9 @@
     <% headers.each do |header| %>
       <th scope="col"><%= header %></th>
     <% end %>
+    <% if @student.present? %>
+      <th>Register</th>
+    <% end %>
     <th colspan="<%= colspan %>"></th>
   </tr>
 </thead>

@@ -1,2 +1,74 @@
 km:
+  title:
+    index: '​បញ្ជី%{entity}'
+    new: '%{entity}ថ្មី'
+    home: 'ទំព័រដើម'
+    teacher: "លោកគ្រូ"
+    student: "សិស្ស"
+    course: "វគ្គសិក្សា"
+    name: "ឈ្មោះ"
+    start_date: "ថ្ងៃចាប់ផ្ដើម"
+    end_date: "ថ្ងៃបញ្ចប់"
+    show: "បង្ហាញ"
+    edit: "កែប្រែ"
+    destroy: "លុប"
+    update: 'ធ្វើឱ្យទាន់សម័យ'
+    first_name: "គោត្តនាម"
+    last_name: "នាម"
+    phone: "លេខទូរស័ព្ទ"
+    parent_phone: "លេខទូរស័ព្ទផ្ទះ"
+    email: "អ៊ីម៉ែល"
+    gender: "ភេទ"
+    date_of_birth: "ថ្ងៃខែឆ្នាំកំណើត"
+    active: "សកម្មភាព"
+    course_registeration: "ចុះឈ្មោះចូលរៀន"
+    back: "ត្រលប់ក្រោយ"
+    female: "ស្រី"
+    male: "ប្រុស"
+    max_student: "ចំនួនសិស្សច្រើនបំផុត"
+    teacher: "លោកគ្រូ"
+    submit: "បញ្ចូល"
+    student_registered: "សិស្សដែលបានចុះឈ្មោះចូលរៀន"
+    are_you_sure: "តើអ្នកប្រាកដទេ?"
+    create_rolment: "បង្កើតថ្មាក់ថ្មី"
+    enrolment_was_successfully_created: "ការចុះឈ្មោះចូលរៀនទទួលបានជោគជ័យ"
+    course_was_successfully_created: "វគ្គសិក្សាត្រូវបានបង្កើតដោយជោគជ័យ"
+    course_was_successfully_updated: "វគ្គសិក្សាត្រូវបាន update ដោយជោគជ័យ"
+    course_was_successfully_destroy: "វគ្គសិក្សាត្រូវបានលុបដោយជោគជ័យ"
+    student_was_successfully_created: "ការចុះឈ្មោះចូលរៀនរបស់សិស្សទទូលបានជោគជ័យ"
+    student_was_successfully_updated: "ការ Update របស់សិស្សទទូលបានជោគជ័យ"
+    student_was_successfully_destroy: "ការលុបរបស់សិស្សទទូលបានជោគជ័យ"
+    teacher_was_successfully_created: "គ្រូបានបង្កើតជោគជ័យ"
+    teacher_was_successfully_updated: "គ្រូបានត្រូវបាន Update ជោគជ័យ"
+    teacher_was_successfully_destroy: "គ្រូបានត្រូវបានលុបជោគជ័យ"
+  date:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
+
+    day_names: [អាទិត្យ, ច័ន្ទ, អង្គារ, ពុត, ព្រហ, សុក្រ, សៅរ៍]
+    abbr_day_names: [អាទ,ចន, អង, ពធ, ព្រហ, សក,សរ]
+
+    # Don't forget the nil at the beginning; there's no such thing as a 0th month
+    month_names: [~, មករា, កុម្ភះ, មិនា, មេសា, ឧសភា, មិថុនា, កក្កដា, សីហា, កញ្ញា, តុលា, វិច្ឆការ, ធ្នូ]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    # Used in date_select and datetime_select.
+    order:
+      - year
+      - month
+      - day
+
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+    am: "am"
+    pm: "pm"
+
+
   

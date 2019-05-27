@@ -13,16 +13,16 @@
       <% end %>
 
       <div class="form-group">
-        <%= form.input :name %>
-        <%= form.input :start_date %>
-        <%= form.input :end_date %>
-        <%= form.input :max_students %>
-        <%= form.association :teacher, label_method: :full_name %>
+        <%= form.input :name, label: t("title.name")%>
+        <%= form.input :start_date, label: t("title.start_date") %>
+        <%= form.input :end_date, label: t("title.end_date") %>
+        <%= form.input :max_students, label: t("title.max_student") %>
+        <%= form.association :teacher, label_method: :full_name, label: t("title.teacher") %>
       </div>
 
       <div class="actions">
-        <%= form.button :submit, class: "btn btn-primary" %>
-        <%= link_to 'Back', courses_path, class: 'btn btn-secondary' %>
+        <%= form.button :submit, class: "btn btn-primary", value: t("title.submit") %>
+        <%= link_to t("title.back"), courses_path, class: 'btn btn-secondary' %>
       </div>
     <% end %>
   </div>

@@ -14,19 +14,19 @@
       <% end %>
 
       <div class="form-group">
-        <%= form.input :first_name %>
-        <%= form.input :last_name %>
-        <%= form.input :phone %>
-        <%= form.input :parents_phone %>
-        <%= form.input :email %>
-        <%= form.input :gender, as: :radio_buttons, collection: ['female', 'male'] %>
-        <%= form.input :date_of_birth %>
-        <%= form.input :active, as: :boolean %>
+        <%= form.input :first_name, label: t("title.first_name") %>
+        <%= form.input :last_name, label: t("title.last_name") %>
+        <%= form.input :phone, label: t("title.phone") %>
+        <%= form.input :parents_phone, label: t("title.parent_phone") %>
+        <%= form.input :email, label: t("title.email") %>
+        <%= form.input :gender, as: :radio_buttons, collection: [t("title.female"), t("title.male")], label: t("title.gender") %>
+        <%= form.input :date_of_birth, order: [:day, :month, :year] %>
+        <%= form.input :active, as: :boolean, label: t("title.active") %>
       </div>
 
       <div class="actions">
-        <%= form.button :submit, class: "btn btn-primary" %>
-        <%= link_to 'Back', students_path, class: 'btn btn-secondary' %>
+        <%= form.button :submit, value: t("title.update"), class: "btn btn-primary" %>
+        <%= link_to t("title.back"), students_path, class: 'btn btn-secondary' %>
       </div>
     <% end %>
   </div>
