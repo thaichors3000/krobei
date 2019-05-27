@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 2019_05_20_170608) do
     t.index ["student_id"], name: "index_enrolments_on_student_id"
   end
 
+  create_table "seed_migration_data_migrations", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "version"
+    t.integer "runtime"
+    t.datetime "migrated_on"
+  end
+
   create_table "students", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name", null: false

@@ -31,5 +31,5 @@
 
 en:
   title:
-    index: '%{entity} List'
+    List: '%{entity} List'
     new: 'New %{entity}'

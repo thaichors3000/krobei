@@ -6,16 +6,16 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-          Start Date: <span style="float: right"><%= @course.start_date %></span>
+          <%= t('header.start_date') %>: <span style="float: right"><%= @course.start_date %></span>
         </li>
         <li class="list-group-item">
-          End Date: <span style="float: right"><%= @course.end_date %></span>
+          <%= t('header.end_date') %>: <span style="float: right"><%= @course.end_date %></span>
         </li>
         <li class="list-group-item">
-          Teacher: <span style="float: right"><%= @course.teacher.full_name %></span>
+          <%= t('header.teacher') %>: <span style="float: right"><%= @course.teacher.full_name %></span>
         </li>
          <li class="list-group-item">
-          Max Students: <span style="float: right"><%= @course.max_students %></span>
+          <%= t('header.max_student')%>: <span style="float: right"><%= @course.max_students %></span>
         </li>
       </ul>
       <div class="card-body">
