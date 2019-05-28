@@ -1,4 +1,10 @@
 km:
+  activerecord:
+    models:
+      teacher: Teacher
+    attributes:
+      teacher:
+        first_name: PAPA
   errors:
     # The default format to use in full error messages.
     format: "%{attribute} %{message}"
