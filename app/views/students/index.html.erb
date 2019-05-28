@@ -19,9 +19,9 @@
           <td><%= student.date_of_birth %></td>
           <td><%= student.active %></td>
           <td>
-            <%= link_to 'Show', student, class: "btn btn-primary student-action-btn" %>
-            <%= link_to 'Edit', edit_student_path(student), class: "btn btn-success student-action-btn" %>
-            <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger student-action-btn" %>
+            <%= link_to t('btn.show'), student, class: "btn btn-primary student-action-btn" %>
+            <%= link_to t('btn.edit'), edit_student_path(student), class: "btn btn-success student-action-btn" %>
+            <%= link_to t('btn.destroy'), student, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger student-action-btn" %>
             <%= link_to 'Course Registeration', new_enrolment_path(student_id: student.id), class: "btn btn-info student-action-btn" %>
           </td>
         </tr>

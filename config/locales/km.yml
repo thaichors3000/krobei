@@ -2,7 +2,12 @@ km:
   title:
     index: '%{entity} List'
     new: 'បង្កើតថ្មី​ %{entity}'
-    Teacher: 'គ្រូ'
+    krobei: 'ក្របី'
+    home: 'ទំព័រដើម'
+    teachers: 'គ្រូ'
+    students: 'សិស្ស'
+    courses: 'មុខវិជ្ជា'
+    language: 'ភាសា'
   header:
     first_name: 'នាមត្រកូល'
     last_name: 'នាមខ្លួន'
@@ -11,7 +16,15 @@ km:
     gender: 'ភេទ'
     date_of_birth: 'ថ្ងៃខែឆ្នាំកំណើត'
     parents_phone: 'លេខអាណាព្យាបាល'
-    teacher: 'លោកគ្រូ'
+    teacher_name: 'ឈ្មោះគ្រូ'
     end_date: 'ថ្ងៃបញ្ចប់'
     start_date: 'ថ្ងៃចាប់ផ្តើម'
     max_student: 'សិស្សសរុប'
+    course_name: 'ឈ្មោះមុខវិជ្ជា'
+  btn:
+    show: 'បង្ហាញ'
+    edit: 'កែប្រែ'
+    destroy: 'លុប'
+  lan:
+    english: 'អង់គ្លេស'
+    khmer: 'ខ្មែរ'

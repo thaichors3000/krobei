@@ -22,9 +22,9 @@
           <td><%= @student.has_course?(course) ? 'YES' : 'NO' %></td>
         <% end %>
         <td>
-          <%= link_to 'Show', course, class: "btn btn-primary" %>
-          <%= link_to 'Edit', edit_course_path(course), class: "btn btn-success" %>
-          <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are your sure?' }, class: "btn btn-danger" %>
+          <%= link_to t('btn.show'), course, class: "btn btn-primary" %>
+          <%= link_to t('btn.edit'), edit_course_path(course), class: "btn btn-success" %>
+          <%= link_to t('btn.destroy'), course, method: :delete, data: { confirm: 'Are your sure?' }, class: "btn btn-danger" %>
         </td>
       </tr>
     <% end %>
