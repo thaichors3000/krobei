@@ -5,6 +5,7 @@ class Course < ApplicationRecord
   has_many :students, through: :enrolments, dependent: :restrict_with_error
 
   validates :name, presence: true
+  validates :max_students, numericality: { greater_than: 0 }
   validates :name, length: { maximum: 100 }
   validates :start_date, presence: true
   validates :end_date, presence: true

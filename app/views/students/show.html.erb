@@ -6,28 +6,28 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-          Phone: <span style="float: right"><%= @student.phone %></span>
+          <%= t("title.phone") %>: <span style="float: right"><%= @student.phone %></span>
         </li>
         <li class="list-group-item">
-          Parents Phone: <span style="float: right"><%= @student.phone %></span>
+          <%= t("title.parent_phone") %>: <span style="float: right"><%= @student.phone %></span>
         </li>
         <li class="list-group-item">
-          Email: <span style="float: right"><%= @student.email %></span>
+           <%= t("title.email") %>: <span style="float: right"><%= @student.email %></span>
         </li>
         <li class="list-group-item">
-          Gender: <span style="float: right"><%= @student.gender %></span>
+           <%= t("title.gender") %>: <span style="float: right"><%= @student.gender %></span>
         </li>
         <li class="list-group-item">
-          Date of birth: <span style="float: right"><%= @student.date_of_birth %></span>
+         <%= t("title.date_of_birth") %>: <span style="float: right"><%= @student.date_of_birth %></span>
         </li>
         <li class="list-group-item">
-          Active: <span style="float: right"><%= @student.active %></span>
+          <%= t("title.active") %>: <span style="float: right"><%= @student.active %></span>
         </li>
       </ul>
       <div class="card-body">
-        <%= link_to 'Edit', edit_student_path(@student), class: 'btn btn-primary' %>
-        <%= link_to 'Back', students_path, class: 'btn btn-secondary' %>
-        <%= link_to 'Courses', student_courses_path(@student), class: 'btn btn-success' %>
+       <%= link_to t("title.edit"), edit_student_path(@student), class: 'btn btn-primary' %>
+        <%= link_to t("title.back"), students_path, class: 'btn btn-secondary' %>
+        <%= link_to t("title.gender"), student_courses_path(@student), class: 'btn btn-success' %>
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@
   <div class="col-md-4 offset-4">
     <div class="card" style="width: 100%;">
       <div class="card-header">
-        <center><b>Registered Courses</b></center>
+        <center><b><%= t("title.courses_registered") %></b></center>
       </div>
       <ul class="list-group list-group-flush">
         <% @student.courses.each do |course| %>

@@ -37,6 +37,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails', '~> 4.3.3'
 gem 'font-awesome-sass', '~> 5.8.1'
+gem 'data-confirm-modal'
 
 # styling form for bootstraps
 gem 'simple_form'

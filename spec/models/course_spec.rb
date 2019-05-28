@@ -10,5 +10,6 @@ RSpec.describe Course, type: :model do
     it { is_expected.to validate_length_of(:name).is_at_most(100) }
     it { is_expected.to validate_presence_of :start_date }
     it { is_expected.to validate_presence_of :end_date }
+    it { is_expected.to validate_numericality_of :max_students}
   end
 end

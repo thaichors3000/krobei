@@ -1,9 +1,9 @@
-<%= render "index_title", entity: "Teacher", path: new_teacher_path %>
+<%= render "index_title", entity: t("title.teacher"), path: new_teacher_path %>
 
 <div class="table-responsive">
   <table class="table table-hover">
     <%= render "table_header",
-      headers: ["#", "First name", "Last name", "Phone", "Email", "Gender", "Date of Birth"],
+      headers: ["#", t("title.first_name"), t("title.last_name"), t("title.phone"), t("title.email"), t("title.gender"), t("title.date_of_birth")],
       colspan: 3 %>
 
     <tbody>
@@ -19,7 +19,7 @@
           <td>
             <%= link_to_icon teacher, icon: "info", type: "info" %>
             <%= link_to_icon edit_teacher_path(teacher), icon: "edit", type: "info" %>
-            <%= link_to_icon teacher, icon: "trash-alt", type: "danger", method: :delete, data: { confirm: "Are you sure?" } %>
+            <%= link_to_icon teacher, icon: "trash-alt", type: "danger", method: :delete, data: {title: t("modal.are_you_sure") + '? ', confirm: t("modal.are_you_sure") + '?',cancel: t("modal.cancel"),commit: t("modal.delete") } %>
           </td>
         </tr>
       <% end %>
