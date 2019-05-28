@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def set_locale
-    I18n.locale = params[:locale]
+    I18n.locale = params[:locale].presence || I18n.default_locale
   end
 end

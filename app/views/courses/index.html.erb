@@ -6,19 +6,10 @@
 <%= render "index_title", entity: "Course", path: new_course_path %>
 
 <table class="table table-dark">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Name</th>
-      <th>Start date</th>
-      <th>End date</th>
-      <th>Teacher</th>
-      <% if @student %>
-        <th>Register</th>
-      <% end %>
-      <th colspan="3"></ht>
-    </tr>
-  </thead>
+  <%= render "table_header",
+   headers: ["#", t('header.course_name'), t('header.start_date'), t('header.end_date'),t('header.teacher_name'), "Active"],
+   colspan: 3 
+  %>
 
   <tbody>
     <% @courses.each do |course| %>
@@ -32,9 +23,9 @@
           <td><%= @student.has_course?(course) ? 'YES' : 'NO' %></td>
         <% end %>
         <td>
-          <%= link_to 'Show', course, class: "btn btn-primary" %>
-          <%= link_to 'Edit', edit_course_path(course), class: "btn btn-success" %>
-          <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are your sure?' }, class: "btn btn-danger" %>
+          <%= link_to t('btn.show'), course, class: "btn btn-primary" %>
+          <%= link_to t('btn.edit'), edit_course_path(course), class: "btn btn-success" %>
+          <%= link_to t('btn.destroy'), course, method: :delete, data: { confirm: 'Are your sure?' }, class: "btn btn-danger" %>
         </td>
       </tr>
     <% end %>
