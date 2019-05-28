@@ -14,12 +14,12 @@
           <td><%= teacher.last_name %></td>
           <td><%= teacher.phone %></td>
           <td><%= teacher.email %></td>
-          <td><%= teacher.gender %></td>
+          <td><%= t("gender.#{teacher.gender}") %></td>
           <td><%= teacher.date_of_birth %></td>
           <td>
             <%= link_to_icon teacher, icon: "info", type: "info" %>
             <%= link_to_icon edit_teacher_path(teacher), icon: "edit", type: "info" %>
-            <%= link_to_icon teacher, icon: "trash-alt", type: "danger", method: :delete, data: {title: t("modal.are_you_sure") + '? ', confirm: t("modal.are_you_sure") + '?',cancel: t("modal.cancel"),commit: t("modal.delete") } %>
+            <%= link_to_destroy teacher, entity: :teacher %>
           </td>
         </tr>
       <% end %>

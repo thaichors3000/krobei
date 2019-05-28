@@ -1,0 +1,8 @@
+km:
+  views:
+    pagination:
+      next: Next >
+      last: Last >>
+      truncate: ...
+      first: << First
+      previous: < Prev

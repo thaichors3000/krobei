@@ -1,7 +1,28 @@
 km:
+  action:
+    edit: Edit
+    create: Create
+    update: Update
+    destroy: Destroy
+    info: Info
+    cancel: Cancel
+  entity:
+    teacher: Teacher
+  form:
+    create_success: Created %{entity} successfully
+    create_fail: Failed to create %{entity}
+    update_success: Updated %{entity} successfully
+    update_fail: Failed to update %{entity}
+    destroy_success: Destroyed %{entity} successfully
+    destroy_fail: Failed to destroy %{entity}
+  gender:
+    female: ស្រី
+    male: ប្រុស
   title:
     index: '​បញ្ជី%{entity}'
     new: '%{entity}ថ្មី'
+    confirm_destroy: Are you sure to destroy %{entity}?
+    destroy: Destroy %{entity}
     welcomes: 'សូមស្វគមន៏'
     our_mission: 'ពួកយើងជឿថាយើងអាចផ្តល់កាអប់រំទៅកាន់មនុស្សរាល់គ្នា'
     krobei: 'ក្របី'
@@ -14,7 +35,6 @@ km:
     end_date: 'ថ្ងៃបញ្ចប់'
     show: 'បង្ហាញ'
     edit: 'កែប្រែ'
-    destroy: 'លុប'
     update: 'ធ្វើឱ្យទាន់សម័យ'
     first_name: 'គោត្តនាម'
     last_name: 'នាម'
@@ -35,16 +55,6 @@ km:
     are_you_sure: 'តើអ្នកប្រាកដទេ?'
     create_rolment: 'បង្កើតថ្មាក់ថ្មី'
     language: 'ភាសា'
-    enrolment_was_successfully_created: 'ការចុះឈ្មោះចូលរៀនទទួលបានជោគជ័យ'
-    course_was_successfully_created: 'វគ្គសិក្សាត្រូវបានបង្កើតដោយជោគជ័យ'
-    course_was_successfully_updated: 'វគ្គសិក្សាត្រូវបាន update ដោយជោគជ័យ'
-    course_was_successfully_destroy: 'វគ្គសិក្សាត្រូវបានលុបដោយជោគជ័យ'
-    student_was_successfully_created: 'ការចុះឈ្មោះចូលរៀនរបស់សិស្សទទូលបានជោគជ័យ'
-    student_was_successfully_updated: 'ការ Update របស់សិស្សទទូលបានជោគជ័យ'
-    student_was_successfully_destroy: 'ការលុបរបស់សិស្សទទូលបានជោគជ័យ'
-    teacher_was_successfully_created: 'គ្រូបានបង្កើតជោគជ័យ'
-    teacher_was_successfully_updated: 'គ្រូបានត្រូវបាន Update ជោគជ័យ'
-    teacher_was_successfully_destroy: 'គ្រូបានត្រូវបានលុបជោគជ័យ'
   date:
     formats:
       # Use the strftime parameters for formats.

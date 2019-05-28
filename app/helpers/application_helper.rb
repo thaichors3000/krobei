@@ -9,14 +9,25 @@ module ApplicationHelper
   end
   
   def link_to_icon(path, **options)
-    link_to path, class: "btn btn-sm btn-outline-#{options[:type]}", **options.except(:type, :icon) do
+    data = { toggle: :tooltip, placement: :top }
+
+    link_to path, class: "btn btn-sm btn-outline-#{options[:type]}", title: t("action.#{options[:icon]}"), data: data, **options.except(:type, :icon) do
       icon 'fas', options[:icon]
     end
   end
 
-  def btn_with_icon(**options)
-    button_tag class: "btn btn-sm btn-outline-#{options[:type]}", **options.except(:type, :icon) do
-      icon 'fas', options[:icon]
+  def link_to_destroy(path, **options)
+    data = {
+      toggle: :tooltip,
+      placement: :top,
+      title: t("title.destroy", entity: t("entity.#{options[:entity]}")),
+      confirm: t("title.confirm_destroy", entity: t("entity.#{options[:entity]}")),
+      cancel: t('action.cancel'),
+      commit: t('action.destroy')
+    }
+
+    link_to path, class: 'btn btn-sm btn-outline-danger', title: t('action.destroy'), method: :delete, data: data do
+      icon 'fas', 'trash-alt'
     end
   end
 end
