@@ -1,2 +1,17 @@
 km:
-  
+  title:
+    index: '%{entity} List'
+    new: 'បង្កើតថ្មី​ %{entity}'
+    Teacher: 'គ្រូ'
+  header:
+    first_name: 'នាមត្រកូល'
+    last_name: 'នាមខ្លួន'
+    phone: 'លេខទូរសព្ទ'
+    email: 'អុីម៉ែល'
+    gender: 'ភេទ'
+    date_of_birth: 'ថ្ងៃខែឆ្នាំកំណើត'
+    parents_phone: 'លេខអាណាព្យាបាល'
+    teacher: 'លោកគ្រូ'
+    end_date: 'ថ្ងៃបញ្ចប់'
+    start_date: 'ថ្ងៃចាប់ផ្តើម'
+    max_student: 'សិស្សសរុប'

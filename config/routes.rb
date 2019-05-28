@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  scope '(:locale)' do
+  scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/, defaults: {locale: "en"} do
     root to: 'home#index'
 
     resources :courses
