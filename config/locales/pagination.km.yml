@@ -1,8 +1,8 @@
 km:
   views:
     pagination:
-      next: Next >
-      last: Last >>
+      next: បន្ទាប់ >
+      last: ត្រលប់ >>
       truncate: ...
-      first: << First
-      previous: < Prev
+      first: << ទំព័រដើម
+      previous: < ទំព័រក្រោយ

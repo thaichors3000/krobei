@@ -1,28 +1,28 @@
 km:
   action:
-    edit: Edit
-    create: Create
-    update: Update
-    destroy: Destroy
-    info: Info
-    cancel: Cancel
+    edit: កែប្រែ
+    create: បង្កើត
+    update: បន្ទាន់សម័យ
+    destroy: លុប
+    info: លម្អិត
+    cancel: បោះបង់
   entity:
     teacher: Teacher
   form:
-    create_success: Created %{entity} successfully
-    create_fail: Failed to create %{entity}
-    update_success: Updated %{entity} successfully
-    update_fail: Failed to update %{entity}
-    destroy_success: Destroyed %{entity} successfully
-    destroy_fail: Failed to destroy %{entity}
+    create_success: បានបង្កើត %{entity} បានជោគជ័យ
+    create_fail: បរាជ័យក្្នងការបង្កើត %{entity}
+    update_success: កែប្រែ %{entity} បានជោគជ័យ
+    update_fail: បរាជ័យក្្នងការកែប្រែ %{entity}
+    destroy_success: បានលុប %{entity} បានជោគជ័យ
+    destroy_fail: បរាជ័យក្្នងការលុប %{entity}
   gender:
     female: ស្រី
     male: ប្រុស
   title:
     index: '​បញ្ជី%{entity}'
     new: '%{entity}ថ្មី'
-    confirm_destroy: Are you sure to destroy %{entity}?
-    destroy: Destroy %{entity}
+    confirm_destroy: តើអ្នកប្រាកដជាចង់លុប​ %{entity} មែន ឬ?
+    destroy: លុប %{entity}
     welcomes: 'សូមស្វគមន៏'
     our_mission: 'ពួកយើងជឿថាយើងអាចផ្តល់កាអប់រំទៅកាន់មនុស្សរាល់គ្នា'
     krobei: 'ក្របី'
@@ -55,6 +55,15 @@ km:
     are_you_sure: 'តើអ្នកប្រាកដទេ?'
     create_rolment: 'បង្កើតថ្មាក់ថ្មី'
     language: 'ភាសា'
+    student_was_successfully_created: 'បង្កើតសិស្សបានជោគជ័យ'
+    student_was_successfully_updated: 'បន្ទាន់សម័យសិស្សបានជោគជ័យ'
+    student_was_successfully_destroy: 'លុបសិស្សបានជោគជ័យ'
+    teacher_was_successfully_created: 'បង្កើតគ្រូបានជោគជ័យ'
+    teacher_was_successfully_updated: 'បន្ទាន់គ្រូបានជោគជ័យ'
+    teacher_was_successfully_destroy: 'លុបបគ្រូានជោគជ័យ'
+    course_was_successfully_created: 'បង្កើតមុខវិជ្ជាបានជោគជ័យ'
+    course_was_successfully_updated: 'បន្ទាន់សម័យមុខវិជ្ជាបានជោគជ័យ'
+    course_was_successfully_destroy: 'លុបមុខវិជ្ជាបាននជោគជ័យ'
   date:
     formats:
       # Use the strftime parameters for formats.
