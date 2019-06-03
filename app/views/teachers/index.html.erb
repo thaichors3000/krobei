@@ -1,9 +1,9 @@
-<%= render "index_title", entity: t("title.teacher"), path: new_teacher_path %>
+<%= render "index_title", entity: t("entity.teacher"), path: new_teacher_path %>
 
 <div class="table-responsive">
   <table class="table table-hover">
     <%= render "table_header",
-      headers: ["#", t("title.first_name"), t("title.last_name"), t("title.phone"), t("title.email"), t("title.gender"), t("title.date_of_birth")],
+      headers: ["#", t("column.first_name"), t("column.last_name"), t("column.phone"), t("column.email"), t("column.gender"), t("column.date_of_birth")],
       colspan: 3 %>
 
     <tbody>

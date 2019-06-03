@@ -1,15 +1,15 @@
-<h1>New Enrolment</h1>
+<h1><% t('title.new', entity: t('entity.enrolment')) %></h1>
 
 <div class="row">
   <div class="col-md-4 offset-4">
     <%= simple_form_for @enrolment do |form| %>
-    <%= form.association :student, label_method: :full_name, label: t("title.student") %>
-      <%= form.association :course, label_method: :name, label: t("title.course") %>
+    <%= form.association :student, label_method: :full_name, label: t("entity.student") %>
+      <%= form.association :course, label_method: :name, label: t("entity.course") %>
 
       <div class="actions">
-        <%= form.button :submit, class: "btn btn-primary", value: t("title.create_rolment")%>
-        <%= link_to t("title.back"), students_path, class: 'btn btn-secondary' %>
+        <%= form.button :submit, class: "btn btn-primary", value: t("enrolment.create_enrolment")%>
+        <%= link_to t("action.back"), students_path, class: 'btn btn-secondary' %>
       </div>
     <% end %>
   </div>
-</div> 
+</div>
