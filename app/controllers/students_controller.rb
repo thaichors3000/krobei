@@ -17,7 +17,7 @@ class StudentsController < ApplicationController
 
     respond_to do |format|
       if @student.save
-        format.html { redirect_to @student, notice: t("title.student_was_successfully_created") }
+        format.html { redirect_to @student, notice: t('flash.create_success', entity: t('entity.student'))}
         format.json { render :show, status: :created, location: @student }
       else
         format.html { render :new }
@@ -29,7 +29,7 @@ class StudentsController < ApplicationController
   def update
     respond_to do |format|
       if @student.update(student_params)
-        format.html { redirect_to @student, notice: t("title.student_was_successfully_updated") }
+        format.html { redirect_to @student, notice: t('flash.update_success', entity: t('entity.student')) }
         format.json { render :show, status: :ok, location: @student }
       else
         format.html { render :edit }
@@ -44,9 +44,7 @@ class StudentsController < ApplicationController
       flash[:error] = error_message
       redirect_to students_url
     else
-      flash[:notice] = t('form.destroy_fail', entity: t('entity.teacher'))
-      
-      # flash[:notice] = t("title.student_was_successfully_destroy")
+      flash[:notice] = t('flash.destroy_success', entity: t('entity.student'))
       redirect_to students_url
     end
   end

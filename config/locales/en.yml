@@ -40,6 +40,7 @@ en:
     back: Back
     submit: Submit
     create_enrolment: create Enrolment
+    registered: registered
   column:
     name: Name
     start_date: Start Date
@@ -93,7 +94,7 @@ en:
     student: Student
     course: Course
     home: Home
-  form:
+  flash:
     create_success: Created %{entity} successfully
     create_fail: Failed to create %{entity}
     update_success: Updated %{entity} successfully

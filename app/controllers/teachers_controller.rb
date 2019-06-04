@@ -17,7 +17,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new
   end
 
-  # GET /teachers/1/edit
+  # GET /teachers/1/edit  
   def edit
   end
 
@@ -28,7 +28,7 @@ class TeachersController < ApplicationController
 
     respond_to do |format|
       if @teacher.save
-        format.html { redirect_to @teacher, notice: t("title.teacher_was_successfully_created") }
+        format.html { redirect_to @teacher, notice: t('flash.create_success', entity: t('entity.teacher'))}
         format.json { render :show, status: :created, location: @teacher }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class TeachersController < ApplicationController
   def update
     respond_to do |format|
       if @teacher.update(teacher_params)
-        format.html { redirect_to @teacher, notice: t("title.teacher_was_successfully_updated") }
+        format.html { redirect_to @teacher, notice: t('flash.update_success', entity: t('entity.teacher')) }
         format.json { render :show, status: :ok, location: @teacher }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class TeachersController < ApplicationController
       flash[:error] = error_message
       redirect_to teachers_url
     else
-      flash[:notice] = t("title.teacher_was_successfully_destroy")
+      flash[:notice] = t('flash.destroy_success', entity: t('entity.teacher'))
       redirect_to teachers_url
     end
   end

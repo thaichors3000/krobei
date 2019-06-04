@@ -9,6 +9,14 @@ km:
     back: ត្រលប់ក្រោយ
     submit: ដាក់​ស្នើ​
     create_enrolment: បង្កើតថ្មាក់ថ្មី
+    registered: ចុះ​ឈ្មោះ​
+  activerecord:
+    errors:
+      messages:
+        record_invalid: មិនមានសុពលភាព៖ %{errors}
+        restrict_dependent_destroy:
+          has_one: មិនអាចលុបបានទេពីព្រោះមាន %{record} នៅឡើយ
+          has_many: មិនអាចលុបបានទេពីព្រោះមាន %{record} នៅឡើយ
   date:
     formats:
       # Use the strftime parameters for formats.
@@ -29,14 +37,46 @@ km:
       - year
       - month
       - day
-
+  errors:
+    format: '%{attribute} %{message}'
+    messages:
+      accepted: ត្រូវតែទទួលយក
+      blank: មិនអាចទទេ
+      confirmation: មិនត្រូវគ្នាជា​មួយ​ %{attribute}
+      empty: មិនអាចទទេ
+      equal_to: ត្រូវតែស្មើនឹង​ %{count}
+      even: ត្រូវ​តែជា​ចំនួន​គូ
+      exclusion: ត្រូវបានបម្រុងទុក
+      greater_than: ត្រូវតែធំជាង %{count}
+      greater_than_or_equal_to: ត្រូវតែធំជាងឬស្មើ %{count}
+      inclusion: មិនត្រូវបានដាក់បញ្ចូលក្នុងបញ្ជី
+      invalid: មិនត្រឹមត្រូវ
+      less_than: ត្រូវតែតិចជាង %{count}
+      less_than_or_equal_to: ត្រូវតែតិចជាងឬស្មើ %{count}
+      model_invalid: 'ការ​ត្រួត​ពិនិត្យ​បានបរាជ័យ: %{errors}'
+      not_a_number: មិនមែនជាលេខទេ
+      not_an_integer: ត្រូវតែជាចំនួនគត់
+      odd: ត្រូវតែជាចំនួនសេស
+      other_than: ត្រូវតែលើសពី %{count}
+      present: ត្រូវតែទទេ
+      required: ត្រូវតែមាន
+      taken: ត្រូវបានគេយករួចទៅហើយ
+      too_long:
+        one: វែងពេក (អតិបរមាគឺ 1 តួអក្សរ)
+        other: វែងពេក (អតិបរមាគឺ %{count} តួអក្សរ)
+      too_short:
+        one: ខ្លីពេក (តិចបំផុតគឺ 1 តួអក្សរ)
+        other: ខ្លីពេក (តិចបំផុតគឺ %{count} តួអក្សរ)
+      wrong_length:
+        one: ប្រវែងខុស (គួរតែមាន 1 តួអក្សរ)
+        other: ប្រវែងខុស (គួរតែជា %{count} តួអក្សរ)
   entity:
     teacher: លោកគ្រូ ឬ អ្នកគ្រូ
     student: សិស្ស
     course: វគ្គសិក្សា
     home: ទំព័រដើម
     enrolment: ការចុះឈ្មោះចូលរៀន
-  form:
+  flash:
     create_success: បាន​បង្កើត​ %{entity} បាន​ដោយ​ជោគ​ជ័យ​
     create_fail: បរាជ័យ​ក្នុង​ការបង្កើត​ %{entity}
     update_success: បាន​កែ​ប្រែ​ %{entity} បាន​ដោយ​ជោគជ័យ​
@@ -104,12 +144,3 @@ km:
     are_you_sure: តើអ្នកប្រាកដទេ?
     language: ភាសា
     krobei: ក្របី
-    student_was_successfully_created: បង្កើតសិស្សបានដោយ​ជោគជ័យ
-    student_was_successfully_updated: កែប្រែព័ត៌មានសិស្សបានដោយ​ជោគជ័យ
-    student_was_successfully_destroy: លុបសិស្សបានដោយ​ជោគជ័យ
-    teacher_was_successfully_created: បង្កើតគ្រូបាន​ដោយ​ជោគជ័យ
-    teacher_was_successfully_updated: កែប្រែព័ត៌មាន​​គ្រូបានដោយ​ជោគជ័យ
-    teacher_was_successfully_destroy: លុបគ្រូ​បាន​ដោយ​ជោគ​ជ័យ​
-    course_was_successfully_created: បង្កើតមុខវិជ្ជាបានដោយ​ជោគជ័យ
-    course_was_successfully_updated: កែប្រែព័ត៌មាន​​មុខវិជ្ជាបានដោយ​ជោគជ័យ
-    course_was_successfully_destroy: លុប​មុខ​វិជ្ជា​បាន​ដោយ​ជោគ​ជ័យ​
