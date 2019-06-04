@@ -12,9 +12,9 @@
           <%= link_to navbar_item[:title], navbar_item[:path], class: "nav-link" %>
         </li>
       <% end %>
-            <li class="nav-item dropdown">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= t('title.language')%>
+          <%= t('lan.language')%>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to t('lan.english'), url_for(locale: 'en'), class: 'dropdown-item' %>

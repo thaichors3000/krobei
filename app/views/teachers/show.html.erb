@@ -6,21 +6,21 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-          <%= t("title.phone") %>: <span style="float: right"><%= @teacher.phone %></span>
+          <%= t("column.phone") %>: <span style="float: right"><%= @teacher.phone %></span>
         </li>
         <li class="list-group-item">
-          <%= t("title.email") %>: <span style="float: right"><%= @teacher.email %></span>
+          <%= t("column.email") %>: <span style="float: right"><%= @teacher.email %></span>
         </li>
         <li class="list-group-item">
-          <%= t("title.gender") %>: <span style="float: right"><%= @teacher.gender %></span>
+          <%= t("column.gender") %>: <span style="float: right"><%= @teacher.gender %></span>
         </li>
         <li class="list-group-item">
-          <%= t("title.date_of_birth") %>: <span style="float: right"><%= @teacher.date_of_birth %></span>
+          <%= t("column.date_of_birth") %>: <span style="float: right"><%= @teacher.date_of_birth %></span>
         </li>
       </ul>
       <div class="card-body">
-        <%= link_to t("title.edit"), edit_teacher_path(@teacher), class: 'btn btn-primary' %>
-        <%= link_to t("title.back"), teachers_path, class: 'btn btn-secondary' %>
+        <%= link_to t("action.edit"), edit_teacher_path(@teacher), class: 'btn btn-primary' %>
+        <%= link_to t("action.back"), teachers_path, class: 'btn btn-secondary' %>
       </div>
     </div>
   </div>
