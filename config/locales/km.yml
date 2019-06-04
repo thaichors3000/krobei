@@ -1,92 +1,126 @@
 km:
-  action:
-    edit: Edit
-    create: Create
-    update: Update
-    destroy: Destroy
-    info: Info
-    cancel: Cancel
-  entity:
-    teacher: Teacher
-  form:
-    create_success: Created %{entity} successfully
-    create_fail: Failed to create %{entity}
-    update_success: Updated %{entity} successfully
-    update_fail: Failed to update %{entity}
-    destroy_success: Destroyed %{entity} successfully
-    destroy_fail: Failed to destroy %{entity}
-  gender:
-    female: ស្រី
-    male: ប្រុស
-  title:
-    index: '​បញ្ជី%{entity}'
-    new: '%{entity}ថ្មី'
-    confirm_destroy: Are you sure to destroy %{entity}?
-    destroy: Destroy %{entity}
-    welcomes: 'សូមស្វគមន៏'
-    our_mission: 'ពួកយើងជឿថាយើងអាចផ្តល់កាអប់រំទៅកាន់មនុស្សរាល់គ្នា'
-    krobei: 'ក្របី'
-    home: 'ទំព័រដើម'
-    teacher: 'លោកគ្រូ ឬ អ្នកគ្រូ'
-    student: 'សិស្ស'
-    course: 'វគ្គសិក្សា'
-    name: 'ឈ្មោះ'
-    start_date: 'ថ្ងៃចាប់ផ្ដើម'
-    end_date: 'ថ្ងៃបញ្ចប់'
-    show: 'បង្ហាញ'
-    edit: 'កែប្រែ'
-    update: 'ធ្វើឱ្យទាន់សម័យ'
-    first_name: 'គោត្តនាម'
-    last_name: 'នាម'
-    phone: 'លេខទូរស័ព្ទ'
-    parent_phone: 'លេខទូរស័ព្ទអាណាព្យាបាល'
-    email: 'អ៊ីម៉ែល'
-    gender: 'ភេទ'
-    date_of_birth: 'ថ្ងៃខែឆ្នាំកំណើត'
-    active: 'សកម្មភាព'
-    course_registeration: 'ចុះឈ្មោះចូលរៀន'
-    back: 'ត្រលប់ក្រោយ'
-    female: 'ស្រី'
-    male: 'ប្រុស'
-    max_student: 'ចំនួនសិស្សច្រើនបំផុត'
-    submit: 'បញ្ចូល'
-    student_registered: 'សិស្សដែលបានចុះឈ្មោះចូលរៀន'
-    courses_registered: 'វគ្គសិក្សាដែលបានចុះឈ្មោះ'
-    are_you_sure: 'តើអ្នកប្រាកដទេ?'
-    create_rolment: 'បង្កើតថ្មាក់ថ្មី'
-    language: 'ភាសា'
-  date:
-    formats:
-      # Use the strftime parameters for formats.
-      # When no format has been given, it uses default.
-      # You can provide other formats here if you like!
-      default: '%Y-%m-%d'
-      short: '%b %d'
-      long: '%B %d, %Y'
-
-    day_names: [អាទិត្យ, ច័ន្ទ, អង្គារ, ពុត, ព្រហ, សុក្រ, សៅរ៍]
-    abbr_day_names: [អាទ, ចន, អង, ពធ, ព្រហ, សក, សរ]
-
-    # Don't forget the nil at the beginning; there's no such thing as a 0th month
-    month_names: [~, មករា, កុម្ភះ, មិនា, មេសា, ឧសភា, មិថុនា, កក្កដា, សីហា, កញ្ញា, តុលា, វិច្ឆការ, ធ្នូ]
-    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
-    # Used in date_select and datetime_select.
-    order:
-      - year
-      - month
-      - day
-
-  time:
-    formats:
-      default: '%a, %d %b %Y %H:%M:%S %z'
-      short: '%d %b %H:%M'
-      long: '%B %d, %Y %H:%M'
-    am: 'am'
-    pm: 'pm'
   lan:
-    english: 'អង់គ្លេស'
-    khmer: 'ខ្មែរ'
+    language: ភាសា
+    khmer: ខ្មែរ
+    english: English
+  action:
+    edit: កែប្រែ​
+    create: បង្កើត​
+    update: ធ្វើ​ការ​កែប្រែ​
+    destroy: លុប​
+    info: ព័ត៌មាន​
+    cancel: បោះ​បង់​
+    back: ត្រលប់​ក្រោយ​
+    registered: ចុះ​ឈ្មោះ​
+    submit: ដាក់​ស្នើ​
+  column:
+    name: ឈ្មោះ​
+    start_date: ថ្ងៃ​ចាប់​ផ្ដើម​
+    end_date: ថ្ងៃ​បញ្ចប់​
+    first_name: នាម​ខ្លួន​
+    last_name: នាម​ត្រកូល​
+    phone: លេខ​ទូរស័ព្ទ​
+    parent_phone: លេខ​ទូរស័ព្ទ​អាណាព្យាបាល​
+    email: អ៊ីមែល​
+    gender: ភេទ​
+    date_of_birth: ថ្ងៃ​ខែ​ឆ្នាំ​កំណើត​
+    active: សកម្ម​
+    course_registration: ការ​ចុះ​ឈ្មោះ​ចូល​វគ្គ​សិក្សា​
+    max_student: ចំនួន​សិស្ស​អតិបរមា​
+  entity:
+    teacher: លោកគ្រូ ឬ អ្នកគ្រូ
+    student: សិស្ស​
+    course: វគ្គ​សិក្សា​
+    home: ទំព័រ​ដើម​
+    enrolment: ការ​ចុះ​ឈ្មោះ​
+  form:
+    create_success: បាន​បង្កើត​ %{entity} បាន​ដោយ​ជោគ​ជ័យ​
+    create_fail: បរាជ័យ​ក្នុង​ការបង្កើត​ %{entity}
+    update_success: បាន​កែ​ប្រែ​ %{entity} បាន​ដោយ​ជោគជ័យ​
+    update_fail: បរាជ័យ​ក្នុង​ការកែ​ប្រែ​ %{entity}
+    destroy_success: បាន​លុប​ %{entity} បាន​ដោយ​ជោគជ័យ​
+    destroy_fail: បរាជ័យ​ក្នុង​ការ​លុប​ %{entity}
+  gender:
+    female: ស្រី​
+    male: ប្រុស​
+  status:
+    true: ពិត​
+    false: មិនពិត
+  title:
+    confirm_destroy: តើ​អ្នក​ពិត​ជា​ចង់​លុប​ %{entity}?
+    destroy: លុប​ %{entity}
+    index: បញ្ជី​​%{entity}
+    new: '%{entity}ថ្មី​'
+    edit: កែប្រែ​ %{entity}
+    detail: 'ព័ត៌មានលម្អិត%{entity}'
+    krobei: ក្របី
+    student_was_successfully_created: បង្កើតសិស្សបានដោយ​ជោគជ័យ
+    student_was_successfully_updated: កែប្រែព័ត៌មានសិស្សបានដោយ​ជោគជ័យ
+    student_was_successfully_destroy: លុបសិស្សបានដោយ​ជោគជ័យ
+    teacher_was_successfully_created: បង្កើតគ្រូបាន​ដោយ​ជោគជ័យ
+    teacher_was_successfully_updated: កែប្រែព័ត៌មាន​​គ្រូបានដោយ​ជោគជ័យ
+    teacher_was_successfully_destroy: លុបគ្រូ​បាន​ដោយ​ជោគ​ជ័យ​
+    course_was_successfully_created: បង្កើតមុខវិជ្ជាបានដោយ​ជោគជ័យ
+    course_was_successfully_updated: កែប្រែព័ត៌មាន​​មុខវិជ្ជាបានដោយ​ជោគជ័យ
+    course_was_successfully_destroy: លុប​មុខ​វិជ្ជា​បាន​ដោយ​ជោគ​ជ័យ​
+  date:
+    abbr_day_names: [អាទ, ចន, អង, ពធ, ព្រហ, សក, សរ]
+    day_names: [អាទិត្យ, ច័ន្ទ, អង្គារ, ពុធ, ព្រហ, សុក្រ, សៅរ៍]
+    abbr_month_names: [~, មករា, កុម្ភះ, មិនា, មេសា, ឧសភា, មិថុនា, កក្កដា, សីហា, កញ្ញា, តុលា, វិច្ឆការ, ធ្នូ]
+    month_names: [~, មករា, កុម្ភះ, មិនា, មេសា, ឧសភា, មិថុនា, កក្កដា, សីហា, កញ្ញា, តុលា, វិច្ឆការ, ធ្នូ]
+    order:
+      - :ឆ្នាំ​
+      - :ខែ​
+      - :ថ្ងៃ​
+    formats:
+      default: '%Y-%m-%d'
+      long: '%B %d, %Y'
+      short: '%b %d'
   modal:
-    are_you_sure: 'តើអ្នកប្រកដទេថាចង់លុប'
-    cancel: 'បោះបង់'
-    delete: 'លុប'
+    are_you_sure: តើ​អ្នក​ពិត​ជា​ចង់​លុបឬ​?
+    cancel: បោះបង់
+    delete: លុប
+  home:
+    welcomes: សូម​ស្វាគមន៍​!
+    our_mission: គោល​បំណង​របស់​យើង​។​
+  student:
+    courses_registered: វគ្គ​សិក្សា​ដែល​បាន​ចុះ​ឈ្មោះ​
+  course:
+    student_registered: សិស្ស​ដែល​បាន​ចុះ​ឈ្មោះ​
+  enrolment:
+    create_enrolment: ចុះ​ឈ្មោះ​សិក្សា​
+  errors:
+    format: '%{attribute} %{message}'
+    messages:
+      accepted: ត្រូវតែយល់ព្រម
+      blank: មិនអាចរំលង
+      confirmation: ផ្ទៀងផ្ទាត់មិនត្រូវនឹង %{attribute}
+      empty: មិនអាចរំលង
+      equal_to: ត្រូវតែស្មើ %{count}
+      even: ត្រូវតែជាចំនួនគត់
+      exclusion: មិនអនុញ្ញាតឱ្យប្រើ
+      greater_than: ត្រូវតែច្រើនជាង %{count}
+      greater_than_or_equal_to: ត្រូវតែច្រើនជាងឬស្មើ %{count}
+      inclusion: មិនមាននៅក្នុងបញ្ជី
+      invalid: មិនត្រឹមត្រូវ
+      less_than: ត្រូវតែតិចជាង %{count}
+      less_than_or_equal_to: ត្រូវតែតិចជាងឬស្មើ %{count}
+      not_a_number: មិនមែនជាលេខទេ
+      not_an_integer: ត្រូវតែជាចំនួនគត់
+      odd: ត្រូវតែជាចំនួនសេស
+      other_than: ត្រូវតែខុសពី %{count}
+      present: ត្រូវតែរំលង
+      taken: មានរួចហើយ
+      too_long: វែងពេក (យ៉ាងច្រើន %{count} តួ)
+      too_short: ខ្លីពេក (យ៉ាងតិច %{count} តួ)
+      wrong_length: ប្រវែងមិនត្រូវ (គួរតែមាន %{count} តួ)
+    template:
+      body: 'សូមពិនិត្យមើលកំហុសនៅខាងក្រោម:'
+      header: មានកំហុស %{count} ដែលបានបញ្ឈប់ការរក្សាទុក %{model}នេះ
+  activerecord:
+    errors:
+      messages:
+        record_invalid: មិនមានសុពលភាព៖ %{errors}
+        restrict_dependent_destroy:
+          has_one: មិនអាចលុបបានទេពីព្រោះមាន %{record} នៅឡើយ
+          has_many: មិនអាចលុបបានទេពីព្រោះមាន %{record} នៅឡើយ

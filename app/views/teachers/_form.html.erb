@@ -13,17 +13,17 @@
       <% end %>
 
       <div class="form-group">
-       <%= form.input :first_name, label: t("title.first_name") %>
-        <%= form.input :last_name, label: t("title.last_name") %>
-        <%= form.input :phone, label: t("title.phone") %>
-        <%= form.input :email, label: t("title.email") %>
-        <%= form.input :gender, as: :radio_buttons, collection: [t("title.female"), t("title.male")], label: t("title.gender") %>
-        <%= form.input :date_of_birth, order: [:day, :month, :year], label: t("title.date_of_birth") %> 
+        <%= form.input :first_name, label: t("column.first_name") %>
+        <%= form.input :last_name, label: t("column.last_name") %>
+        <%= form.input :phone, label: t("column.phone") %>
+        <%= form.input :email, label: t("column.email") %>
+        <%= form.input :gender, as: :radio_buttons, collection: [[t("gender.female"), 'female'], [t("gender.male"), 'male']], label: t("column.gender") %>
+        <%= form.input :date_of_birth, order: [:day, :month, :year], label: t("column.date_of_birth") %>
       </div>
 
       <div class="actions">
-       <%= form.button :submit, class: "btn btn-primary", value: t("title.update") %>
-        <%= link_to t("title.back"), teachers_path, class: "btn btn-secondary" %>
+        <%= form.button :submit, class: "btn btn-primary", value: t("action.submit") %>
+        <%= link_to t("action.back"), teachers_path, class: "btn btn-secondary" %>
       </div>
     <% end %>
   </div>
