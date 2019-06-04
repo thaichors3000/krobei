@@ -44,7 +44,9 @@ class StudentsController < ApplicationController
       flash[:error] = error_message
       redirect_to students_url
     else
-      flash[:notice] = t("title.student_was_successfully_destroy")
+      flash[:notice] = t('form.destroy_fail', entity: t('entity.teacher'))
+      
+      # flash[:notice] = t("title.student_was_successfully_destroy")
       redirect_to students_url
     end
   end
