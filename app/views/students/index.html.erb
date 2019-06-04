@@ -1,8 +1,8 @@
-<%= render "index_title", entity: t("title.student"), path: new_student_path %>
+<%= render "index_title", entity: t("entity.student"), path: new_student_path %>
 <div class="table-responsive">
   <table class="table table-hover">
     <%= render "table_header",
-      headers: ["#", t("title.first_name"), t("title.last_name"), t("title.phone"), t("title.parent_phone"), t("title.email"), t("title.gender"), t("title.date_of_birth"), t("title.active")],
+      headers: ["#", t("column.first_name"), t("column.last_name"), t("column.phone"), t("column.parent_phone"), t("column.email"), t("column.gender"), t("column.date_of_birth"), t("column.active")],
       colspan: 3 %>
 
     <tbody>
@@ -14,14 +14,14 @@
           <td><%= student.phone %></td>
           <td><%= student.parents_phone %></td>
           <td><%= student.email %></td>
-          <td><%= student.gender %></td>
+          <td><%= t("gender.#{student.gender}") %></td>
           <td><%= student.date_of_birth %></td>
-          <td><%= student.active %></td>
+          <td><%= t("status.#{student.active}") %></td>
           <td>
            
             <%= link_to_icon student, icon: "info", type: "info" %>
             <%= link_to_icon edit_student_path(student), icon: "edit", type: "info" %>
-            <%= link_to_icon student, method: :delete, data: {title: t("modal.are_you_sure") + '? ', confirm: t("modal.are_you_sure") + '?',cancel: t("modal.cancel"),commit: t("modal.delete") }, icon: "trash-alt", type: "danger" %>
+            <%= link_to_destroy student, entity: :student %>
             <%= link_to_icon new_enrolment_path(student_id: student.id), icon: "registered", type: "info" %>
           </td>
         </tr>

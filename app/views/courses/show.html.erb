@@ -6,22 +6,22 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-          <%= t("title.start_date") %> <span style="float: right"><%= @course.start_date %></span>
+          <%= t("column.start_date") %> <span style="float: right"><%= @course.start_date %></span>
 
         </li>
         <li class="list-group-item">
-         <%= t("title.end_date") %> <span style="float: right"><%= @course.end_date %></span>
+         <%= t("column.end_date") %> <span style="float: right"><%= @course.end_date %></span>
         </li>
         <li class="list-group-item">
-          <%= t("title.teacher") %> <span style="float: right"><%= @course.teacher.full_name %></span>  
+          <%= t("entity.teacher") %> <span style="float: right"><%= @course.teacher.full_name %></span>
         </li>
          <li class="list-group-item">
-          <%= t("title.max_student") %> <span style="float: right"><%= @course.max_students %></span> 
+          <%= t("column.max_student") %> <span style="float: right"><%= @course.max_students %></span>
         </li>
       </ul>
       <div class="card-body">
-        <%= link_to t("title.edit"), edit_course_path(@course), class: 'btn btn-primary' %>
-        <%= link_to t("title.back"), courses_path, class: 'btn btn-secondary' %>
+        <%= link_to t("action.edit"), edit_course_path(@course), class: 'btn btn-primary' %>
+        <%= link_to t("action.back"), courses_path, class: 'btn btn-secondary' %>
       </div>
     </div>
   </div>
@@ -31,7 +31,7 @@
   <div class="col-md-4 offset-4">
     <div class="card" style="width: 100%;">
       <div class="card-header">
-        <center><b><%= t("title.student_registered") %></b></center>
+        <center><b><%= t("course.student_registered") %></b></center>
       </div>
       <ul class="list-group list-group-flush">
         <% @course.students.each do |student| %>
