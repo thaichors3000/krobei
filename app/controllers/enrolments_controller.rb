@@ -6,7 +6,7 @@ class EnrolmentsController < ApplicationController
     @enrolment = Enrolment.new(enrolment_params)
 
     if @enrolment.save
-      redirect_to students_path, notice: t("title.enrolment_was_successfully_created")
+      redirect_to students_path, notice: t('flash.create_success', entity: t('entity.enrolment'))}
     else
       flash[:error] = @enrolment.errors.full_messages.join(',') if @enrolment.errors.present?
       render :new

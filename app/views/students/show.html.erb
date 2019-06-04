@@ -6,28 +6,28 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
-          <%= t("title.phone") %>: <span style="float: right"><%= @student.phone %></span>
+          <%= t("table.phone") %>: <span style="float: right"><%= @student.phone %></span>
         </li>
         <li class="list-group-item">
-          <%= t("title.parent_phone") %>: <span style="float: right"><%= @student.phone %></span>
+          <%= t("table.parent_phone") %>: <span style="float: right"><%= @student.phone %></span>
         </li>
         <li class="list-group-item">
-           <%= t("title.email") %>: <span style="float: right"><%= @student.email %></span>
+           <%= t("table.email") %>: <span style="float: right"><%= @student.email %></span>
         </li>
         <li class="list-group-item">
-           <%= t("title.gender") %>: <span style="float: right"><%= @student.gender %></span>
+           <%= t("table.gender") %>: <span style="float: right"><%= t("gender.#{@student.gender}") %></span>
         </li>
         <li class="list-group-item">
-         <%= t("title.date_of_birth") %>: <span style="float: right"><%= @student.date_of_birth %></span>
+         <%= t("table.date_of_birth") %>: <span style="float: right"><%= @student.date_of_birth %></span>
         </li>
         <li class="list-group-item">
-          <%= t("title.active") %>: <span style="float: right"><%= @student.active %></span>
+          <%= t("table.active") %>: <span style="float: right"><%= t("status.#{@student.active}") %></span>
         </li>
       </ul>
       <div class="card-body">
-       <%= link_to t("title.edit"), edit_student_path(@student), class: 'btn btn-primary' %>
-        <%= link_to t("title.back"), students_path, class: 'btn btn-secondary' %>
-        <%= link_to t("title.gender"), student_courses_path(@student), class: 'btn btn-success' %>
+       <%= link_to t("action.edit"), edit_student_path(@student), class: 'btn btn-primary' %>
+        <%= link_to t("action.back"), students_path, class: 'btn btn-secondary' %>
+        <%= link_to t("entity.course"), student_courses_path(@student), class: 'btn btn-success' %>
       </div>
     </div>
   </div>

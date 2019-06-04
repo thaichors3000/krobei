@@ -1,10 +1,10 @@
 module ApplicationHelper
   def navbar_items
     [
-      { title: t('title.home'), path: root_path },
-      { title: t('title.teacher'), path: teachers_path },
-      { title: t('title.student'), path: students_path },
-      { title: t('title.course'), path: courses_path }
+      { title: t('entity.home'), path: root_path },
+      { title: t('entity.teacher'), path: teachers_path },
+      { title: t('entity.student'), path: students_path },
+      { title: t('entity.course'), path: courses_path }
     ]
   end
   
@@ -20,7 +20,7 @@ module ApplicationHelper
     data = {
       toggle: :tooltip,
       placement: :top,
-      title: t("title.destroy", entity: t("entity.#{options[:entity]}")),
+      title: t("action.destroy", entity: t("entity.#{options[:entity]}")),
       confirm: t("title.confirm_destroy", entity: t("entity.#{options[:entity]}")),
       cancel: t('action.cancel'),
       commit: t('action.destroy')
