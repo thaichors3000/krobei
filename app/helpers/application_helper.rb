@@ -1,10 +1,10 @@
 module ApplicationHelper
   def navbar_items
     [
-      { title: t('title.home'), path: root_path },
-      { title: t('title.teacher'), path: teachers_path },
-      { title: t('title.student'), path: students_path },
-      { title: t('title.course'), path: courses_path }
+      { title: t('entity.home'), path: root_path },
+      { title: t('entity.teacher'), path: teachers_path },
+      { title: t('entity.student'), path: students_path },
+      { title: t('entity.course'), path: courses_path }
     ]
   end
   

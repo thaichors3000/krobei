@@ -1,13 +1,13 @@
 <% if @student %>
-  <h1>Student Detail</h1>
+  <h1><%= t('title.detail', entity: t('entity.student')) %></h1>
   <h4><%= @student.full_name %></h4>
 <% end %>
 
-<%= render "index_title", entity: t("title.course"), path: new_course_path %>
+<%= render "index_title", entity: t("entity.course"), path: new_course_path %>
 <div class="table-responsive">
   <table class="table table-hover">
     <%= render "table_header",
-      headers: ["#", t("title.name"), t("title.start_date"), t("title.end_date"), t("title.teacher")], colspan: 3 %>
+       headers: ["#", t("column.name"), t("column.start_date"), t("column.end_date"), t("entity.teacher")], colspan: 3 %>
 
 
    <tbody>
